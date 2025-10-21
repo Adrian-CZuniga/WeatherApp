@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="txt_request_permission">To enhance your experience, we need you to grant the following permissions:</string>
+    <string name="txt_grant_permission">Grant permission</string>
+    <string name="txt_skip" >Skip</string>
+    <string name="txt_permissions">Permissions</string>
+    <string name="title_activity_search_location">SearchLocation</string>
+</resources>
