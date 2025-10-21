@@ -1,5 +1,6 @@
 package com.example.weatherapp.main
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
@@ -9,6 +10,7 @@ import android.location.Geocoder
 import android.location.Location
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresPermission
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -44,7 +46,6 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             database.dao.getWeatherByLocation(lat, lon)
         }
     val weatherList: LiveData<MutableList<WeatherModel>> = database.dao.getWeathers()
-
     init {
         getLastLocation()
     }

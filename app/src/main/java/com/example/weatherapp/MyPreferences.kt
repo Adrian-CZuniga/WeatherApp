@@ -2,21 +2,22 @@ package com.example.weatherapp
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.core.content.edit
 
 class MyPreferences(context:Context) {
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences("Preferences", Context.MODE_PRIVATE)
 
     fun saveLocation(value1: Double, value2: Double) {
-        val editor = sharedPreferences.edit()
-        editor.putLong("latitude", value1.toRawBits())
-        editor.putLong("longitude", value2.toRawBits())
-        editor.apply()
+        sharedPreferences.edit {
+            putLong("latitude", value1.toRawBits())
+            putLong("longitude", value2.toRawBits())
+        }
     }
 
     fun saveCountry(country: String){
-        val editor = sharedPreferences.edit()
-        editor.putString("country", country)
-        editor.apply()
+        sharedPreferences.edit {
+            putString("country", country)
+        }
     }
 
     fun getPrefsLat(): Double {
@@ -34,6 +35,6 @@ class MyPreferences(context:Context) {
     }
 
     fun deleteAllPreferences(){
-        sharedPreferences.edit().clear().apply()
+        sharedPreferences.edit { clear() }
     }
 }

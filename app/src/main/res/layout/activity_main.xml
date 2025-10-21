@@ -28,9 +28,10 @@
 
             <TextView
                 android:id="@+id/txt_empty_list"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No hay items papuuuuu"
+                android:text="No se encontro el clima"
+                android:textAlignment="center"
                 android:textColor="@color/white"/>
 
         </RelativeLayout>

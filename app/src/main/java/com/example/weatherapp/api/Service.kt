@@ -13,10 +13,7 @@ interface Service {
         @Query("lon") lon:Double,
         @Query("appid") apiKey:String
     ): Response<JsonResponse>
-    
-
 }
-
 
 private var retrofit = Retrofit.Builder()
     .baseUrl(Utils.BASE_URL)
