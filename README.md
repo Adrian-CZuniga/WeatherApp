@@ -38,7 +38,7 @@ La aplicación permite consultar el **clima actual** utilizando la **ubicación 
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/weather-app.git
+   git clone https://github.com/Adrian-CZuniga/WeatherApp.git
 2. Abre el proyecto con Android Studio.
 
 3. Configura tu API Key de OpenWeather:
